@@ -9,7 +9,9 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <app-recipies-item  *ngFor='let recepieEl of recepies' [recipie]="recepieEl"></app-recipies-item>
+            <app-recipies-item  *ngFor='let recepieEl of recepies' [recipie]="recepieEl"
+                (recipieSelected)='onRecipieSelected(recepieEl)'
+            ></app-recipies-item>
             
         </div>
     </div>
