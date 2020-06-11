@@ -10,6 +10,7 @@ import { RecipiesDetailComponent } from './recipies/recipies-detail/recipies-det
 import { RecipiesItemComponent } from './recipies/recipies-list/recipies-item/recipies-item.component';
 import { ShopingListComponent } from './shoping-list/shoping-list.component';
 import {ShopingEditComponent} from './shoping-list/shoping-edit/shoping-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import {ShopingEditComponent} from './shoping-list/shoping-edit/shoping-edit.com
     RecipiesDetailComponent,
     RecipiesItemComponent,
     ShopingListComponent,
-    ShopingEditComponent
+    ShopingEditComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
