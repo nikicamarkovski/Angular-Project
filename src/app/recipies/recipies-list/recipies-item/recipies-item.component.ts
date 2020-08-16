@@ -9,7 +9,7 @@ import { Recipie } from '../../recipies.model';
 })
 export class RecipiesItemComponent implements OnInit {
 @Input() recipie: Recipie;
- 
+ @Input() index: number;
   
 
   ngOnInit(): void {

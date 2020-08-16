@@ -1,16 +1,12 @@
-
- 
-
-
 <div class="row">
     <div class="col-xs-12">
       
-        <button class="btn btn-success">New Recepie</button>
+       <button class="btn btn-success" (click)="onNewRecipe()">New Recepie</button>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <app-recipies-item  *ngFor='let recepieEl of recepies' [recipie]="recepieEl"
-               
+            <app-recipies-item  *ngFor='let recepieEl of recepies; let i = index' [recipie]="recepieEl"
+               [index]='i'
             ></app-recipies-item>
             
         </div>
