@@ -1,12 +1,13 @@
+
 import {Recipie} from './recipies.model';
-import { EventEmitter, Injectable } from '@angular/core';
+import {  Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shoping-list/shopping-list.service';
 
 @Injectable()
 
 export class RecipieService {
-    recipieSelected = new EventEmitter<Recipie>();
+
    private recepies: Recipie[] = [
         new Recipie('a test recepie' , 'simple test' ,  'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMo0c1p0j7T8aN3T94g9M2wwgJdKs23CcQxWdZyE89AsGwhbTH&usqp=CAU', [
             new Ingredient('Meat' , 1),

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Recipie } from '../recipies.model';
 import { RecipieService } from '../recipie.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { relative } from 'path';
+
 
 @Component({
   selector: 'app-recipies-detail',
