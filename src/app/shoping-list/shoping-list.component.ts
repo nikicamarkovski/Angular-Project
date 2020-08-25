@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, OnDestroy } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
 import { Subscription } from 'rxjs';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './shoping-list.component.html',
   styleUrls: ['./shoping-list.component.css']
 })
-export class ShopingListComponent implements OnInit {
+export class ShopingListComponent implements OnInit , OnDestroy {
     ingredients: Ingredient[];
     private igChangeSub: Subscription;
   constructor( private slService: ShoppingListService) { }
@@ -21,6 +21,9 @@ export class ShopingListComponent implements OnInit {
         this.ingredients = ingredients;
       }
     );
+  }
+  onEditItem(index: number) {
+    this.slService.startedEditing.next(index)
   }
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnDestroy(): void {

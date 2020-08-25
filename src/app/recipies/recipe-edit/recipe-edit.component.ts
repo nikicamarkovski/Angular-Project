@@ -12,6 +12,7 @@ export class RecipeEditComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.id);
     this.route.params.subscribe(
       (params: Params) => {
         // tslint:disable-next-line: no-string-literal

@@ -16,9 +16,11 @@ export class RecipiesDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params)=>{
+      
         // tslint:disable-next-line: no-string-literal
         this.id = +params['id'];
         this.recipie = this.recepieService.getRecipe(this.id);
+        
     }
      );
     }

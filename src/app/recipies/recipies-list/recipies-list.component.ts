@@ -16,7 +16,7 @@ export class RecipiesListComponent implements OnInit {
   ngOnInit(): void {
     this.recepies = this.recipieService.getRecipies();
   }
-
+  
   onNewRecipe() {
     this.router.navigate(['new'] , {relativeTo: this.route});
   }
