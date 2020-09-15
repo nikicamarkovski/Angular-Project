@@ -15,6 +15,7 @@ export class ShopingListComponent implements OnInit , OnDestroy {
 
   ngOnInit(): void {
     this.ingredients = this.slService.getIngredients();
+   
    // tslint:disable-next-line: align
    this.igChangeSub =  this.slService.ingredientChanged.subscribe(
       (ingredients: Ingredient[]) =>{
@@ -23,6 +24,7 @@ export class ShopingListComponent implements OnInit , OnDestroy {
     );
   }
   onEditItem(index: number) {
+    console.log(index);
     this.slService.startedEditing.next(index)
   }
   // tslint:disable-next-line: use-lifecycle-interface

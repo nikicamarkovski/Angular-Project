@@ -11,13 +11,22 @@ export class ShoppingListService {
 
       getIngredients() {
           return this.ingredients.slice();
-      };
+      }
+
+      getIngredient(index: number) {
+
+          return this.ingredients[index];
+      }
       addIngredients (ingridient : Ingredient) {
             this.ingredients.push(ingridient);
             this.ingredientChanged.next(this.ingredients.slice());
       }
       addIngredient(ingredients: Ingredient[]) {
         this.ingredients.push(...ingredients);
+        this.ingredientChanged.next(this.ingredients.slice());
+      }
+      updateIngredient(index: number , newIngredient: Ingredient){
+        this.ingredients[index] = newIngredient;
         this.ingredientChanged.next(this.ingredients.slice());
       }
 };
