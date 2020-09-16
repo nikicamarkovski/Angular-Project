@@ -14,8 +14,9 @@ export class ShopingListComponent implements OnInit , OnDestroy {
   constructor( private slService: ShoppingListService) { }
 
   ngOnInit(): void {
+    
     this.ingredients = this.slService.getIngredients();
-   
+    
    // tslint:disable-next-line: align
    this.igChangeSub =  this.slService.ingredientChanged.subscribe(
       (ingredients: Ingredient[]) =>{
