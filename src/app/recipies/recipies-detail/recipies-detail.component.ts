@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipie } from '../recipies.model';
+import { Recipe } from '../recipies.model';
 import { RecipieService } from '../recipie.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./recipies-detail.component.css']
 })
 export class RecipiesDetailComponent implements OnInit {
-  recipie: Recipie;
+  recipie: Recipe;
   id: number;
   constructor(private recepieService: RecipieService , private route: ActivatedRoute, private router: Router) { }
 

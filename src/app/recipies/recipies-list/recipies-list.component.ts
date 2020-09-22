@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Recipie } from '../recipies.model';
+import { Recipe } from '../recipies.model';
 import { RecipieService } from '../recipie.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,10 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RecipiesListComponent implements OnInit {
  
-  recepies: Recipie[];
+  recepies: Recipe[];
   constructor(private recipieService: RecipieService , private router: Router , private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.recipieService.recipeChanged.subscribe((recipes: Recipe[])=>{
+      this.recepies = recipes;
+    })
     this.recepies = this.recipieService.getRecipies();
   }
   

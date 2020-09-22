@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Recipie } from '../../recipies.model';
+import { Recipe } from '../../recipies.model';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Recipie } from '../../recipies.model';
   styleUrls: ['./recipies-item.component.css']
 })
 export class RecipiesItemComponent implements OnInit {
-@Input() recipie: Recipie;
+@Input() recipie: Recipe;
  @Input() index: number;
   
 
