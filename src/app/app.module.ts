@@ -1,3 +1,4 @@
+import { RecipieService } from './recipies/recipie.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,7 +35,7 @@ import { RecipeEditComponent } from './recipies/recipe-edit/recipe-edit.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService , RecipieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

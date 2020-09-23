@@ -40,4 +40,8 @@ export class RecipieService {
         this.recepies[index] = newRecipe;
         this.recipeChanged.next(this.recepies.slice());
     }
+    deleteRecipe(index: number) {
+        this.recepies.splice(index , 1);
+        this.recipeChanged.next(this.recepies.slice());
+    }
 }

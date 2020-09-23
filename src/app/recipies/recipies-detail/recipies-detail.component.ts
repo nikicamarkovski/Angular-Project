@@ -20,6 +20,7 @@ export class RecipiesDetailComponent implements OnInit {
         // tslint:disable-next-line: no-string-literal
         this.id = +params['id'];
         this.recipie = this.recepieService.getRecipe(this.id);
+     
         
     }
      );
@@ -30,6 +31,10 @@ export class RecipiesDetailComponent implements OnInit {
   onEditRecipe() {
      this.router.navigate(['edit'], {relativeTo: this.route});
     // this.router.navigate(['../', this.id , 'edit'] , {relativeTo: this.route});
+  }
+  onDeleteRecipe() {
+    this.recepieService.deleteRecipe(this.id);
+    this.router.navigate(['/recipes'])
   }
 
 }
